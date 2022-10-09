@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>second assignment</title>
+    <link rel="stylesheet" href="/design.css">
+</head>
+
+<body>
+    <header>
+        <h1>Webbteknik 1</h1>
+        <h2>Uppgift 2</h2>
+    </header>
+
+
+    <nav>
+        <h3 id="navHead"> Navigation </h3>
+        <ul>
+            <li><a href="index.html">Sida 1</a></li>
+            <li><a href="page2.html">Sida 2</a></li>
+            <li><a href="page3.html">Sida 3</a></li>
+        </ul>
+        <img id="img1" src="/img/trees.jpg" alt="träd på fält">
+    </nav>
+
+    <main>
+        <h3>F4. Layout</h3>
+        <ol type="a" class="frågor">
+            <li> då man skapar en layout med grid används bl.a. CSS-egenskaperna grid-template-columns, grid-template-rows och grid-template-areas. Beskriv vad dessa används till. </li>
+            <li> Vad är en media query och vad används den till? </li>
+        </ol>
+        <section>
+            <h3>a.</h3>
+            <p>
+                Grid-template-columns (GTC) används för att specificera hur många kolumner websidan ska bestå av. Exempelvis är det möjligt att dela in sidan i 3 sektioner med olika innehåll i varje. Här specificerar man även vilken bredd varje kolumn ska anta. </p>
+            <p>
+                Grid-template-rows (GTR) används för att bestämma hur många rader elelr sektioner websidan ska innehålla. Hur mycket plats varje rad ska ockupera i höjdled bestäms även här.
+            </p>
+            <p>
+                grid-template-areas är funktionen som gör det möjligt att, genom rutnätet som tidigare bestämts i GTC och GTR, bestämma vilken sektion som ska finnas var. Man kan även skapa "tomma" kolumner, vilka agerar likt luftspalter på sidan.
+            </p>
+            <h3>b.</h3>
+            <p>
+                En media query är till för att omforma och anpassa sidan till andra format. Olika enheter med olika skärmstorlekar och egenskaper kräver anpassning av websidan för att göra den användarvänlig i flera format. Därför finns möjligheten att genom media query skriva om css-koden vid överskridandet av en viss skärmstorlek. 
+            </p>
+
+
+        </section>
+    </main>
+
+    <sideColumn>
+        <h2>Transitions</h2>
+        <div class="transition">
+            <input type="checkbox" id="svar">
+            <label for="svar">Jag har läst svaren</label>
+            <div>
+                <h3>Bra jobbat!</h3>
+                <p>
+                    Tack för att du läste mina svar!
+                </p>
+            </div>
+            
+        </div>
+
+    </sideColumn>
+
+    <footer>
+        <p>
+            sida 1
+        </p>
+    </footer>
+</body>
+
+</html>

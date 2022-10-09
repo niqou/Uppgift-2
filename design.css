@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+html {
+    font-size: 18px;
+}
+
+html,
+body {
+    box-sizing: 100%;
+
+}
+
+body {
+    background-color: #e9e2c4;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 150px min-content auto min-content;
+    grid-template-areas:
+        "header header"
+        "nav    nav"
+        "main   sideColumn"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+nav {
+    grid-area: nav;
+    background-color: burlywood;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+}
+
+nav a {
+    color: black;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+nav a:link,
+nav a:visited {
+    color: #050750;
+}
+
+nav a:hover,
+nav a:active {
+    color: #ba3131;
+}
+
+#navHead {
+    color: #035703;
+}
+
+main {
+    grid-area: main;
+    background-color: #ba3131;
+}
+
+sideColumn {
+    grid-area: sideColumn;
+    
+}
+
+.transition {
+    position: relative;
+    display: block;
+    margin-right: 2em;
+}
+
+.transition>div {
+    position: absolute;
+    background-color: rgb(142, 177, 142);
+    border: 2px solid black;
+    margin: 0%;
+    padding: 10px;
+    width: auto;
+}
+
+#svar~div {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+#svar:checked~div {
+    transform: scaleY(1);
+}
+footer {
+    grid-area: footer;
+    color: #e7e3e3;
+    background-color: #035703;
+}
+
+.foot {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: 125px min-content auto auto min-content;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sideColumn"
+            "footer";
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: 100px min-content auto auto min-content;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sideColumn"
+            "footer";
+    }
+
+    main {
+        font-size: 14px;
+    }
+
+    header {
+        font-size: 16px;
+    }
+
+    nav li {
+        display: block;
+        padding: 0px;
+
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
